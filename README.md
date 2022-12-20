@@ -2,7 +2,7 @@
 
 Pomodoro Counter to count how many 25min coding/study sessions I did.
 
-This is a React app project to apply my knowledge learned about React State and UseState Hook.
+This is a React app project to apply my knowledge learned about React State, UseState Hook and Props.
 
 **Link to project:**
 

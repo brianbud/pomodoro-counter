@@ -23,7 +23,7 @@ export default function App() {
       <div className="window">
         <h2>Tomato Counter</h2>
         <div className="tomato-box">
-          <h1>{counter}</h1>
+          <h1>{!counter ? "No tomatoes yet" : counter}</h1>
         </div>
         <div className="buttons-container">
           <div className="button" onClick={decrement}>-</div>
