@@ -3,15 +3,20 @@ import './App.css'
 
 export default function App() {
 
-  const [counter, setCounter] = React.useState(10)
+  const [counter, setCounter] = React.useState('')
 
-function decrement(){
-  setCounter(prevCount=> prevCount - 1) 
-}
 
-function increment(){
-  setCounter(prevCount => prevCount + 1)
-}
+  const tomatoImages = []
+
+  const tomatoString = tomatoImages.join('')
+
+  function decrement(){
+  setCounter(prevCount=> prevCount.slice(0,-2)) 
+  }
+
+  function increment(){
+  setCounter(prevCount => prevCount + "🍅")
+  }
 
   return (
     <div className="App">
