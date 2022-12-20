@@ -9,6 +9,10 @@ function decrement(){
   setCounter(prevCount=> prevCount - 1) 
 }
 
+function increment(){
+  setCounter(prevCount => prevCount + 1)
+}
+
   return (
     <div className="App">
       <div className="window">
@@ -18,7 +22,7 @@ function decrement(){
         </div>
         <div className="buttons-container">
           <div className="button" onClick={decrement}>-</div>
-          <div className="button">+</div>
+          <div className="button" onClick={increment}>+</div>
         </div>
       </div>
     </div>
