@@ -1,5 +1,8 @@
 import React from "react"
 import './App.css'
+import TomatoBox from "./TomatoBox"
+import ButtonContainer from "./ButtonContainer"
+
 
 export default function App() {
 
@@ -10,25 +13,12 @@ export default function App() {
 
   const tomatoString = tomatoImages.join('')
 
-  function decrement(){
-  setCounter(prevCount=> prevCount.slice(0,-2)) 
-  }
-
-  function increment(){
-  setCounter(prevCount => prevCount + "🍅")
-  }
-
   return (
     <div className="App">
       <div className="window">
         <h2>Tomato Counter</h2>
-        <div className="tomato-box">
-          <h1>{!counter ? "No tomatoes yet" : counter}</h1>
-        </div>
-        <div className="buttons-container">
-          <div className="button" onClick={decrement}>-</div>
-          <div className="button" onClick={increment}>+</div>
-        </div>
+        <TomatoBox counter={counter}/>
+        <ButtonContainer counter={counter} setCounter={setCounter}/>
       </div>
     </div>
   );
