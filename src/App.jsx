@@ -1,25 +1,26 @@
 import React from "react"
 import './App.css'
-import TomatoBox from "./TomatoBox"
-import ButtonContainer from "./ButtonContainer"
 
 
-export default function App() {
-
-  const [counter, setCounter] = React.useState('')
+const days = ["Mon", "Tues", "Wed", "Th", "Fri", "Sat", "Sun"];
 
 
-  const tomatoImages = []
-
-  const tomatoString = tomatoImages.join('')
-
-  return (
-    <div className="App">
-      <div className="window">
-        <h2>Tomato Counter</h2>
-        <TomatoBox counter={counter}/>
-        <ButtonContainer counter={counter} setCounter={setCounter}/>
+  export default function App() {
+    return (
+      <div className="App">
+        <div className="window">
+          <h2>Tomato Counter</h2>
+          {days.map((day) => (
+            <div key={day} className="tomato-box">
+              <h3>{day}</h3>
+              <div className="tomato-day-box"></div>
+            </div>
+          ))}
+          <div className="buttons-container">
+            <div className="button">-</div>
+            <div className="button">+</div>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
